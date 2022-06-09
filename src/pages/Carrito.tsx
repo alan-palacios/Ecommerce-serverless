@@ -49,7 +49,7 @@ export default function Carrito() {
       if (code === 200){
         console.log(result);
         alert('carrito eliminado')
-        location.reload();
+        setArticulos([]);
       }else
         alert(JSON.stringify(result)); 
     });
