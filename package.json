@@ -2,6 +2,7 @@
   "name": "ecommerce-front",
   "version": "0.1.0",
   "private": true,
+  "homepage":"https://alan-palacios.github.io/Ecommerce-serverless",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^12.1.5",
@@ -23,8 +24,10 @@
     "typescript": "^4.6.3"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
-    "build": "CI=false && react-scripts build",
+    "build": "react-scripts build",
     "test": "react-scripts test --passWithNoTests",
     "eject": "react-scripts eject"
   },
@@ -44,6 +47,7 @@
     ]
   },
   "devDependencies": {
-    "@iconify/react": "^3.2.1"
+    "@iconify/react": "^3.2.1",
+    "gh-pages": "^4.0.0"
   }
 }

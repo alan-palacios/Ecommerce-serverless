@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, HashRouter, Route, Routes } from "react-router-dom";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import AgregarArticulo from "./AgregarArticulo";
@@ -10,7 +10,7 @@ import Home from "./Home";
 function App() {
   return (
     <div className="flex flex-col items-center justify-center h-full bg-background relative">
-      <BrowserRouter>
+      <HashRouter>
         <Navbar />
         <Routes>
           <Route path="/" element={<Home/>} />
@@ -19,7 +19,7 @@ function App() {
           <Route path="/comprar" element={<ComprarArticulo/>} />
           <Route path="/carrito" element={<Carrito/>} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
       <Footer /> 
     </div>
   );
