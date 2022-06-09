@@ -13,11 +13,11 @@ function App() {
       <HashRouter>
         <Navbar />
         <Routes>
-          <Route path="/" element={<Home/>} />
-          <Route path="/agregar-articulo" element={<AgregarArticulo/>} />
-          <Route path="/:id" element={<DetalleArticulo/>} />
-          <Route path="/comprar" element={<ComprarArticulo/>} />
-          <Route path="/carrito" element={<Carrito/>} />
+          <Route path="/Ecommerce-serverless" element={<Home/>} />
+          <Route path="/Ecommerce-serverless/agregar-articulo" element={<AgregarArticulo/>} />
+          <Route path="/Ecommerce-serverless/:id" element={<DetalleArticulo/>} />
+          <Route path="/Ecommerce-serverless/comprar" element={<ComprarArticulo/>} />
+          <Route path="/Ecommerce-serverless/carrito" element={<Carrito/>} />
         </Routes>
       </HashRouter>
       <Footer /> 
