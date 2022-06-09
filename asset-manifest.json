@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/Ecommerce-serverless/static/css/main.7e4b8c13.css",
-    "main.js": "/Ecommerce-serverless/static/js/main.dfe4fe31.js",
+    "main.js": "/Ecommerce-serverless/static/js/main.ad48d041.js",
     "index.html": "/Ecommerce-serverless/index.html",
     "main.7e4b8c13.css.map": "/Ecommerce-serverless/static/css/main.7e4b8c13.css.map",
-    "main.dfe4fe31.js.map": "/Ecommerce-serverless/static/js/main.dfe4fe31.js.map"
+    "main.ad48d041.js.map": "/Ecommerce-serverless/static/js/main.ad48d041.js.map"
   },
   "entrypoints": [
     "static/css/main.7e4b8c13.css",
-    "static/js/main.dfe4fe31.js"
+    "static/js/main.ad48d041.js"
   ]
 }
