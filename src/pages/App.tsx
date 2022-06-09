@@ -10,7 +10,7 @@ import Home from "./Home";
 function App() {
   return (
     <div className="flex flex-col items-center justify-center h-full bg-background relative">
-      <HashRouter>
+      <HashRouter basename={process.env.PUBLIC_URL}>
         <Navbar />
         <Routes>
           <Route path="" element={<Home/>} />
