@@ -9,6 +9,7 @@ export default function Carrito() {
   const [articulos, setArticulos] = useState<Array<Articulo>>();
   const [total, setTotal] = useState(0);
   const [showModal, setShowModal] = useState(false);
+  const [reload, setReload] = useState("");
   const consultaCarrito =()=>{
     api.post("consulta_carrito", {}, (code, result)=>{
       if (code === 200){
@@ -28,6 +29,10 @@ export default function Carrito() {
   useEffect(() => {
     consultaCarrito();
   }, [])
+
+  useEffect(() => {
+    consultaCarrito();
+  }, [reload])
   
   const renderArticulos =()=>{
     if(articulos){
@@ -35,7 +40,7 @@ export default function Carrito() {
                 if(articulo.cantidad){
                   return(
                   <ArticuloCarrito id_articulo={articulo.id_articulo} descripcion={articulo.descripcion} precio={articulo.precio} cantidadComprada={articulo.cantidad} 
-                    key={i} fotografia={`data:image/jpeg;base64,${articulo.foto}`} />
+                    key={i} fotografia={`data:image/jpeg;base64,${articulo.foto}`}  onClick={()=>eliminarDelCarrito(articulo.id_articulo)}/>
                   )
                 }
                 return (<></>)
@@ -49,7 +54,19 @@ export default function Carrito() {
       if (code === 200){
         console.log(result);
         alert('carrito eliminado')
-        setArticulos([]);
+        setReload('2');
+        setShowModal(false);
+      }else
+        alert(JSON.stringify(result)); 
+    });
+  }
+
+  const eliminarDelCarrito =(id_articulo: number)=>{
+    api.post("borra_articulo_carrito", {id_articulo}, (code, result)=>{
+      if (code == 200){
+        console.log(result);
+		    alert("articulo eliminado");
+        setReload('1');
       }else
         alert(JSON.stringify(result)); 
     });
