@@ -15,7 +15,7 @@ export default function ArticuloCarrito({id_articulo, descripcion, precio, canti
       if (code == 200){
         console.log(result);
 		alert("articulo eliminado");
-		location.assign('https://alan-palacios.github.io/Ecommerce-serverless/carrito');
+		window.location.assign('https://alan-palacios.github.io/Ecommerce-serverless/carrito');
       }else
         alert(JSON.stringify(result)); 
     });
